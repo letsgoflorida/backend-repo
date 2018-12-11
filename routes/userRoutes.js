@@ -19,19 +19,9 @@ router.post("/signup", (req, res, next) => {
     }
 
     const hashedPass = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
-  
-    const newUser = new User({
-      username: req.body.username,
-      password: hashedPass,
-      email: req.body.email,
-    });
-
-    newUser.save(err => {
-      if (err) {
-        res.status(400).json({ message: "Could not properly save the user." });
-        return;
-      }
-          
+    req.body.password = hashedPass;
+    User.create(req.body)
+    .then((newUser)=>{
       req.login(newUser, (err) => {
         if (err) {
           res.status(500).json({ message: "Login after signup went bad." });
@@ -39,7 +29,10 @@ router.post("/signup", (req, res, next) => {
         }
         res.json(newUser);
       });
-    });
+    })
+    .catch(()=>{
+      res.status(400).json({ message: "Could not properly save the user." });
+    })
   });
 });
 
@@ -66,8 +59,32 @@ router.post("/login", (req, res, next) => {
 });
 
 router.post("/logout", (req, res, next) => {
-  req.logout();
-  res.json({message: "Log out success!"});
+  if(req.user) {
+    req.logout();
+    res.json({message: "Log out successful!"});
+  } else {
+    res.json({message:"There's no user logged in"})
+  }
 });
+
+router.post("/edit", (req, res, next) => {
+  User.findByIdAndUpdate(req.user._id, req.body)
+  .then((user)=>{
+    res.json(user)
+  })
+  .catch(()=>{
+    res.status(400).json({ message: "Could not properly update the user." })
+  })
+})
+
+router.get("/loggedin", (req, res, next) => {
+  if (req.isAuthenticated()) {
+      res.json(req.user);
+      return;
+  }
+  res.status(500).json({ message: 'Unauthorized' });
+});
+
+
 
 module.exports = router;

@@ -47,8 +47,8 @@ app.use((req, res, next)=>{
 })
 
 app.use("/api/user", require("./routes/userRoutes"));
-// app.use("/api/trip", require("./routes/tripRoutes"));
-// app.use("/api/review", require("./routes/reviewRoutes"));
-// app.use("/api/detail", require("./routes/detailRoutes"));
+app.use("/api/trip", require("./routes/tripRoutes"));
+app.use("/api/review", require("./routes/reviewRoutes"));
+app.use("/api/detail", require("./routes/detailRoutes"));
 
 module.exports = app;
