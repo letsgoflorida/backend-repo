@@ -43,4 +43,31 @@ router.post("/signup", (req, res, next) => {
   });
 });
 
+router.post("/login", (req, res, next) => {
+  passport.authenticate("local", (err, theUser, failure) => {
+    if (err) {
+      res.json({message: "Something went wrong authenticating user"});
+      return;
+    }
+
+    if (!theUser) {
+      res.json(failure);
+      return;
+    }
+
+    req.login(theUser, (err) => {
+      if (err) {
+        res.json({message: "Session save went bad."});
+        return;
+      }
+      res.json(req.user);
+    });
+  })(req, res, next);
+});
+
+router.post("/logout", (req, res, next) => {
+  req.logout();
+  res.json({message: "Log out success!"});
+});
+
 module.exports = router;
