@@ -9,6 +9,7 @@ router.post("/signup", (req, res, next) => {
   User.findOne({username: req.body.username}, (err, foundUser) => {
 
     if(err){
+      console.log(err)
       res.status(500).json({message: "Could not properly create the user."});
       return;
     }
@@ -27,6 +28,7 @@ router.post("/signup", (req, res, next) => {
           res.status(500).json({ message: "Login after signup went bad." });
           return;
         }
+        console.log(newUser)
         res.json(newUser);
       });
     })
@@ -73,7 +75,7 @@ router.post("/edit", (req, res, next) => {
     res.json(user)
   })
   .catch(()=>{
-    res.status(400).json({ message: "Could not properly update the user." })
+    res.status(400).json({message: "Could not properly update the user."})
   })
 })
 
@@ -82,7 +84,7 @@ router.get("/loggedin", (req, res, next) => {
       res.json(req.user);
       return;
   }
-  res.status(500).json({ message: 'Unauthorized' });
+  res.status(500).json({message: "Unauthorized"});
 });
 
 
