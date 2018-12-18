@@ -55,5 +55,6 @@ app.use("/api/user", require("./routes/userRoutes"));
 app.use("/api/trip", require("./routes/tripRoutes"));
 app.use("/api/review", require("./routes/reviewRoutes"));
 app.use("/api/detail", require("./routes/detailRoutes"));
+app.use("api/google", require("./routes/googleRoutes"));
 
 module.exports = app;
