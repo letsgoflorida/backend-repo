@@ -14,18 +14,21 @@ router.post("/locationInfo", (req, res, next)=> {
             result.photos = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${result.photos["0"].photo_reference}&key=${process.env.GOOGLE_KEY}`
             return result
           }
+          return false
         })
         restaurants2 = restaurants.data.results.map((result)=>{
           if(result.photos){
             result.photos = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${result.photos["0"].photo_reference}&key=${process.env.GOOGLE_KEY}`
             return result
           }
+          return false
         })
         activities2 = activities.data.results.map((result)=>{
           if(result.photos){
             result.photos = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${result.photos["0"].photo_reference}&key=${process.env.GOOGLE_KEY}`
             return result
           }
+          return false
         })
         res.json({
           hotels: hotels2,
