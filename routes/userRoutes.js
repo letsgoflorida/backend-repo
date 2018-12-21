@@ -79,6 +79,16 @@ router.post("/edit", (req, res, next) => {
   })
 })
 
+router.post("/getUser", (req, res, next) => {
+  User.findById(req.user._id).populate("trips")
+  .then((user)=>{
+    res.json(user)
+  })
+  .catch(()=>{
+    res.status(400).json({message: "Could not properly find the user."})
+  })
+})
+
 router.get("/loggedin", (req, res, next) => {
   if (req.isAuthenticated()) {
       res.json(req.user);

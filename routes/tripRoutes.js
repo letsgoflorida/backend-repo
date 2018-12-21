@@ -28,7 +28,7 @@ router.post("/new", (req, res, next)=>{
   .then((trip)=>{
     User.findByIdAndUpdate(req.user._id, {$push: {trips: trip._id}}, {new: true})
     .then((user)=>{
-      res.json([trip, user]);
+      res.json(trip);
     })
     .catch((err)=>{
       res.json(err);
