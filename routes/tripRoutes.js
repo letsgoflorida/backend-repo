@@ -13,9 +13,10 @@ router.get("/", (req, res, next) => {
   }) 
 });
 
-router.get("/:id/details", (req, res, next)=>{
-  Trip.findById(req.params.id)
+router.post("/detail", (req, res, next)=>{
+  Trip.findById(req.body.trip).populate("details")
   .then((trip)=>{
+    console.log(trip)
     res.json(trip);   
   })
   .catch((err)=>{
