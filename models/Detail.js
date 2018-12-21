@@ -5,7 +5,7 @@ const detailSchema = new Schema({
   location: String,
   name: String,
   rating: String,
-  price_level: String,
+  price: String,
   photos: String,
   url: String, 
 }, {

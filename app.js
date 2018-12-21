@@ -68,10 +68,6 @@ app.use("/api/review", require("./routes/reviewRoutes"));
 app.use("/api/detail", require("./routes/detailRoutes"));
 app.use("/api/google", require("./routes/googleRoutes"));
 
-
-
-
-
 app.use((req, res, next) => {
   res.sendFile(__dirname + "/public/index.html");
 });

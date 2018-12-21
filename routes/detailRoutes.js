@@ -6,7 +6,8 @@ const Detail      = require("../models/Detail");
 router.post("/new", (req, res, next)=>{
   Detail.create(req.body.detail)
   .then((detail)=>{
-    Trip.findByIdAndUpdate(req.body.detail.trip_id, {$push: {details: detail._id}}, {new: true})
+    console.log(req.body.trip)
+    Trip.findByIdAndUpdate(req.body.trip, {$push: {details: detail._id}}, {new: true})
     .then((trip)=>{
       res.json(trip);
     })
