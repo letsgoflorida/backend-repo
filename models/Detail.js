@@ -6,7 +6,7 @@ const detailSchema = new Schema({
   name: String,
   rating: String,
   price: String,
-  photos: String,
+  photo: String,
   url: String, 
 }, {
   timestamps: true
