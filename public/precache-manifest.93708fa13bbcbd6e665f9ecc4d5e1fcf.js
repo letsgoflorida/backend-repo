@@ -1,31 +1,43 @@
 self.__precacheManifest = [
   {
-    "revision": "82080b549355ce69d057",
-    "url": "/static/css/main.6728fdcf.chunk.css"
+    "revision": "1b970308fdb94520646c",
+    "url": "/static/css/main.b291b4f5.chunk.css"
   },
   {
-    "revision": "82080b549355ce69d057",
-    "url": "/static/js/main.82080b54.chunk.js"
+    "revision": "1b970308fdb94520646c",
+    "url": "/static/js/main.1b970308.chunk.js"
   },
   {
-    "revision": "6a167b0608fec8acb1fe",
+    "revision": "c95feab1d82e3763053c",
     "url": "/static/css/1.4551c241.chunk.css"
   },
   {
-    "revision": "6a167b0608fec8acb1fe",
-    "url": "/static/js/1.6a167b06.chunk.js"
+    "revision": "c95feab1d82e3763053c",
+    "url": "/static/js/1.c95feab1.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
     "url": "/static/js/runtime~main.229c360f.js"
   },
   {
+    "revision": "97fcdabdf9482b052ffbbceffc7cc0c5",
+    "url": "/static/media/Bavro-Regular.97fcdabd.ttf"
+  },
+  {
     "revision": "3f2620045ad206d986cacbad3ecd5ffd",
     "url": "/static/media/bird.3f262004.jpg"
   },
   {
+    "revision": "77bdd6d7ea3a1abca38f39643ffed506",
+    "url": "/static/media/Kungfont-Regular.77bdd6d7.otf"
+  },
+  {
     "revision": "2e7c11112421797d30b8cd27502936fb",
     "url": "/static/media/gradient.2e7c1111.jpg"
+  },
+  {
+    "revision": "518076bbc9b82ca828bf83c27c5eff22",
+    "url": "/static/media/BRUX-Regular.518076bb.otf"
   },
   {
     "revision": "c75d953b9969a24ae4cdfedacc20a203",
@@ -92,7 +104,11 @@ self.__precacheManifest = [
     "url": "/static/media/bike.93948dac.png"
   },
   {
-    "revision": "1037aef0689a976f72edaa5e8d298131",
+    "revision": "5343616db8bd061e73901a15ab84826f",
+    "url": "/static/media/money_icon_322468.5343616d.png"
+  },
+  {
+    "revision": "bf7e99351ab05abde8bb2dfa69f007ff",
     "url": "/index.html"
   }
 ];

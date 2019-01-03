@@ -3,6 +3,7 @@ const Schema   = mongoose.Schema;
 
 const detailSchema = new Schema({
   location: String,
+  type: String,
   name: String,
   rating: String,
   price: String,
