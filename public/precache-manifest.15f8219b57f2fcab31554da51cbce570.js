@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "5580565a54e0c7889e1e",
-    "url": "/static/css/main.ea02284f.chunk.css"
+    "revision": "7e577fc6e9480798251b",
+    "url": "/static/css/main.141061d2.chunk.css"
   },
   {
-    "revision": "5580565a54e0c7889e1e",
-    "url": "/static/js/main.5580565a.chunk.js"
+    "revision": "7e577fc6e9480798251b",
+    "url": "/static/js/main.7e577fc6.chunk.js"
   },
   {
-    "revision": "c95feab1d82e3763053c",
+    "revision": "fb7632ad20513b8c915c",
     "url": "/static/css/1.4551c241.chunk.css"
   },
   {
-    "revision": "c95feab1d82e3763053c",
-    "url": "/static/js/1.c95feab1.chunk.js"
+    "revision": "fb7632ad20513b8c915c",
+    "url": "/static/js/1.fb7632ad.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -108,7 +108,11 @@ self.__precacheManifest = [
     "url": "/static/media/money_icon_322468.5343616d.png"
   },
   {
-    "revision": "60418c29426a26f11237f3793d5fd09b",
+    "revision": "335cb1c043a186fdd4f77170b45a34a4",
+    "url": "/static/media/brokenHeart.335cb1c0.png"
+  },
+  {
+    "revision": "d61b21eec7fcbd0f8151f6eea548b3c8",
     "url": "/index.html"
   }
 ];
